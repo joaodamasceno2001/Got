@@ -13,6 +13,7 @@ module.exports.jogo = function (application, req, res) {
   JogoDAO.iniciaJogo(res, usuario, casa);
 };
 
+
 module.exports.sair = function (application, req, res) {
   req.session.destroy(function (err) {
     res.render("index", { validacao: {} });
